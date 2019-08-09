@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+  <title>Document</title>
+</head>
+<body>
+    <h1><center>Products Table</center></h1>
+    <h4>Search Box</h4>
+    <input type="text" class="form-control mb-2"  ng-model="search">
+      <div ng-controller='dashctrl'>
+        <table class="table table-secondary table-hover table-responsive" id="makeEditable">
+          <thead>
+            <tr>
+              <th>_id</th>
+              <th>Id </th>
+              <th>MainCategory </th>
+              <th>ProductName</th>
+              <th>Price </th>
+              <th>Qty </th>
+              <th>StyleNumber</th>
+              <th>Color </th>
+              <th>Size </th>
+              <th>Size1 </th>
+              <th>Size2 </th>
+              <th>Size3 </th>
+              <th>Size4 </th>
+              <th>Size5 </th>
+              <th>Size6 </th>
+              <th>ImageUrl</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat='key in products | filter:search'>
+              <td>{{key._id}}</td>
+              <td>{{key.Id}}</td>
+              <td>{{key.MainCategory}}</td>
+              <td>{{key.ProductName}}</td>
+              <td>{{key.Price}}</td>
+              <td>{{key.Qty}}</td>
+              <td>{{key.StyleNumber}}</td>
+              <td>{{key.Color}}</td>
+              <td>{{key.Size}}</td>
+              <td>{{key.Size1}}</td>
+              <td>{{key.Size2}}</td>
+              <td>{{key.Size3}}</td>
+              <td>{{key.Size4}}</td>
+              <td>{{key.Size5}}</td>
+              <td>{{key.Size6}}</td>
+              <td><img src="{{key.ImageUrl}}"></td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- <button id="but_add">Add New Row</button> -->
+    </div>
+  </body>
+  
+    <script src="https://code.jquery.com/jquery-3.4.1.js"integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-route.min.js"></script>
+  <script src="./js/bootstable.js"></script>
+
+  <script>
+      $('#makeEditable').SetEditable({
+      $addButton: $('#but_add')
+    });
+  </script>
+</html>
+  

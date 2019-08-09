@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/product&homepage.css">
+
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="../js/utils/shoeSize.js"></script>
+  <script src="../js/utils/plus-minusbtn.js"></script>
+  <script src="../js/dashboard/productmodule.js"></script>
+  <script src="../js/user/factories/productfact.js"></script>
+
+<style type="text/css">
+  .selected{
+    background: red;
+    color:white;
+  }
+
+</style>
+
+  <title>Document</title>
+</head>
+
+<body ng-app="product">
+  <nav class="navbar navbar-light bg-danger">
+    <a class="navbar-brand" href="index">
+        <img src="./logo/logo.png" class="img-fluid" width="50" height="45" alt="">
+    </a>
+    
+      <div>
+      <%products.forEach(menu=>{%>
+          <%if(menu.MainCategory=='Men'){%>
+          <div class="btn-group menu">
+              <div class="dropdown">
+              <button class="btn btn-dark dropdown mx-1"  data-toggle="dropdown" id="dropdownMenu">
+                  <%=menu.MainCategory%></button>
+
+                  <div class="dropdown-menu dropdown">
+                  <a class="dropdown-item btn btn-danger dropdown-header" data-toggle="dropdown"> 
+                      <%=menu.Category%></a>
+                      <div class="dropdown-link"><a class="dropdown-item" href="#"><%=menu.SubCategory%></a></div>
+                  </div>
+              </div> 
+          </div>
+          <%}%>
+
+          <%if(menu.MainCategory=='Women'){%>
+          <div class="btn-group menu">
+              <div class="dropdown">
+                  <button class="btn btn-dark dropdown mx-1"  data-toggle="dropdown" id="dropdownMenu">
+                  <%=menu.MainCategory%></button>
+              
+                  <div class="dropdown-menu dropdown">
+                  <a class="dropdown-item btn btn-danger dropdown-header" data-toggle="dropdown"> 
+                      <%=menu.Category%></a>
+                      <div class="dropdown-link"><a class="dropdown-item" href="Jackets"><%=menu.SubCategory%></a></div>
+                  </div>
+              </div> 
+          </div>
+          <%}%>
+
+          <%if(menu.MainCategory=='Kids'){%>
+          <div class="btn-group menu">
+              <div class="dropdown">
+                  <button class="btn btn-dark dropdown mx-1"  data-toggle="dropdown" id="dropdownMenu">
+                  <%=menu.MainCategory%></button>
+              
+                  <div class="dropdown-menu dropdown">
+                  <a class="dropdown-item btn btn-danger dropdown-header" data-toggle="dropdown"> 
+                      <%=menu.Category%></a>
+                      <div class="dropdown-link"><a class="dropdown-item" href="Jackets"><%=menu.SubCategory%></a></div>
+                  </div>
+              </div> 
+          </div>
+          <%}%>
+
+
+          <%if(menu.MainCategory=='Sports'){%>
+          <div class="btn-group menu">
+              <div class="dropdown">
+                  <button class="btn btn-dark dropdown mx-1"  data-toggle="dropdown" id="dropdownMenu">
+                  <%=menu.MainCategory%></button>
+              
+                  <div class="dropdown-menu dropdown">
+                  <a class="dropdown-item btn btn-danger dropdown-header" data-toggle="dropdown"> 
+                      <%=menu.Category%></a>
+                      <div class="dropdown-link"><a class="dropdown-item" href="Jackets"><%=menu.SubCategory%></a></div>
+                  </div>
+              </div> 
+          </div>
+          <%}%>
+
+
+          <%if(menu.MainCategory=='Collection'){%>
+          <div class="btn-group menu">
+              <div class="dropdown">
+                  <button class="btn btn-dark dropdown mx-1"  data-toggle="dropdown" id="dropdownMenu">
+                  <%=menu.MainCategory%></button>
+              
+                  <div class="dropdown-menu dropdown">
+                  <a class="dropdown-item btn btn-danger dropdown-header" data-toggle="dropdown"> 
+                      <%=menu.Category%></a>
+                      <div class="dropdown-link"><a class="dropdown-item" href="Jackets"><%=menu.SubCategory%></a></div>
+                  </div>
+              </div> 
+          </div>
+          <%}%>
+
+
+          <%if(menu.MainCategory=='Sale'){%>
+          <div class="btn-group menu">
+              <div class="dropdown">
+                  <button class="btn btn-dark dropdown mx-1"  data-toggle="dropdown" id="dropdownMenu">
+                  <%=menu.MainCategory%></button>
+              
+                  <div class="dropdown-menu dropdown">
+                  <a class="dropdown-item btn btn-danger dropdown-header" data-toggle="dropdown"> 
+                      <%=menu.Category%></a>
+                      <div class="dropdown-link"><a class="dropdown-item" href="Jackets"><%=menu.SubCategory%></a></div>
+                  </div>
+              </div> 
+          </div>
+          <%}%>
+      <%})%>
+      </div>  
+            
+          <!--<%+JSON.stringify(global.sheetMenu)%> -->
+    
+        <form action="search" method="GET"  ng-controller="productcntrl">
+            <div>
+                <input autocomplete="off" class="searchbar" name="search" ng-model="product.search" type="text" placeholder="Search" >
+                <span><button class="btn btn-dark searchbtn" ng-click="search()"><i class="fas fa-search"></i></button></span>
+            </div>
+        </form>
+    
+        <button id="cartnav" onclick="addItem(this)" class="btn"><i class="fas fa-shopping-cart"></i></button>
+    
+        <a class="login" href="login.html">Login</a>
+        <a class="register" href="register.html">Register</a>
+    </nav>
+
+<!-- Content Starts from here  -->
+    <p></p>
+    <div>
+      <div id="shop">
+        <%ItemDesc.forEach(item=>{%>
+          <%if(item.MainCategory=='Men'){%>
+            <div class="name">
+              <h2><%=item.ProductName%></h2>
+            </div>
+
+            <div class="price">
+              <h2 style="color:red"><span>&#x20b9</span><%=item.Price%></h2>
+            </div>
+
+            <div class="gst">
+              <h2>Style Number : <%=item.StyleNumber%></h2>
+            </div>
+
+            <div class="options">
+                <div>
+                  <h2 class="color">Color : <%=item.Color%></h2>
+                </div>
+
+                <div class="Shoe-sizes">
+                  <h2 class="mr-2">Size : </h2>
+                  <h2 class="size-title"></h2>
+                </div>
+
+                <ul class="size">
+                    <a style="text-decoration:none;" href="javascript:void(0)">
+                      <li class="size-list" onclick="shoeSize(this)"><%=item.Size%></li>
+                      <li class="size-list" onclick="shoeSize(this)"><%=item.Size1%></li>
+                      <li class="size-list" onclick="shoeSize(this)"><%=item.Size2%></li>
+                      <li class="size-list" onclick="shoeSize(this)"><%=item.Size3%></li>
+                      <li class="size-list" onclick="shoeSize(this)"><%=item.Size4%></li>
+                      <li class="size-list" onclick="shoeSize(this)"><%=item.Size5%></li>
+                      <li class="size-list" onclick="shoeSize(this)"><%=item.Size6%></li>
+                    </a>
+                </ul>
+
+                <div id="plus-minus">
+                    <h2 class="mr-3"><span class="qty-label">QTY : </span></h2>
+                      <button value='-' style="border-radius:20px" class='qtyminus btn btn-danger mr-2' onclick="minus()" field='quantity'>-</button>
+                      <input type='text' name='quantity' value='1' disabled  class='qty' />
+                      <button value='+' class='qtyplus btn btn-success' onclick="plus()" field='quantity'>+</button>
+                  </div>
+            </div>
+
+            <div ng-controller="productcntrl">
+              <button class="btn cart-btn btn-warning mr-4 cartbtn"  ng-click="addtocart()" pid="5cf624f9d7b3f70d6104be90" onclick="addItem(this)">Add to cart<i class="fa fa-shopping-cart"></i> </button>
+              <span style="display:none" class="counter">0</span>
+              
+              <a href="google"><button class="btn cart-btn btn-primary"> Buy Now</button></a>
+            </div> 
+
+            <div class="main-img">
+              
+              <img class="enlarge" id="main" src="<%=item.EnlargeImage%>" width="623px" height="623px">
+            
+            </div>
+
+            <div class="new-tag">
+                <p>NEW</p><span class="triangle-left"></span>
+            </div>
+
+
+            <ul class="image-list thumbs">
+            
+              <li class="image gallery-image"><img src="<%=item.EnlargeImage%>" width="75px" height="75px">
+              </li><br>
+
+              <li class="image gallery-image"><img src="<%=item.EnlargeImage1%>" width="75px" height="75px">
+              </li><br>
+
+              <li class="image gallery-image"><img src="<%=item.EnlargeImage3%>" width="75px" height="75px">
+              </li><br>
+
+              <li class="image gallery-image"><img src="<%=item.EnlargeImage4%>" width="75px" height="75px">
+              </li><br>
+
+              <li class="image gallery-image"><img src="<%=item.EnlargeImage5%>" width="75px" height="75px">
+              </li><br>
+            </ul>
+          <%}%>
+        <%})%>
+    </div>
+</body>
+
+<script>
+   $('.thumbs img').hover(function() {
+    var url = $(this).attr('src');
+    $('#main').attr('src', url);
+  });    
+</script>
+</html>

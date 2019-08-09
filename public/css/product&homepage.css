@@ -1,0 +1,444 @@
+body {
+  font-family: 'Gugi', cursive;
+  box-sizing: border-box;
+}
+
+.btn-danger:not(:disabled):not(.disabled).active, .btn-danger:not(:disabled):not(.disabled):active, .show>.btn-danger.dropdown-toggle {
+
+  color:navy;
+  background-color: yellowgreen;
+  border-color: yellowgreen;
+  }
+
+  .dropdown-item:hover {
+    background-color:deepskyblue;
+  }
+
+  .dropdown-item 
+  {
+  display: block;
+  width: 100%;
+  padding: 2px;
+  font-weight: 500;
+  color: navy;
+  text-align: center;
+  background-color: yellowgreen;
+  border: none;
+
+  }
+
+
+h2 {font-size: 1.5rem;}
+
+.cart-btn{
+  position: relative;
+  left: 4%;
+  top: 6vw;
+  padding: 17px;
+  text-align: center;
+  font-size: 20px;
+}
+
+ #shop {
+   display: block;
+   float: right;
+   position: relative;
+   top: 4vw;
+   left: -3%;
+ }
+
+ .name {margin-bottom:6%;}
+ .price {margin-bottom: 6%;}
+ .gst { 
+   display: inline-block; 
+   margin-bottom: 6%;
+  }
+
+ .color{display: inline-block;}
+
+  li {display: inline-flex;}
+
+  #title { margin-top: 7%;}
+
+
+
+.size-title {
+
+  margin:5% 0%;
+  position: relative;
+  top:-4px;
+}
+
+.quantity {
+  position: relative;
+  left: 65%;
+  top: 34vw;
+  font-size: 28px;
+  width: 7%;
+}
+
+.size-list {
+  display: inline-block;
+  margin-right: 6px;
+    list-style: none;
+    font-size: 16px;
+    text-decoration: none;
+    border:1px solid black;
+    padding: 13px;
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 3%;
+    text-align: center;
+  }
+
+  .size-list:hover {
+    
+    color:red;
+    border: 1px solid red;
+  }
+
+ 
+  .size {
+    position: relative;
+    margin: 5% 0%;
+    padding-left: 0%;
+  }
+
+  #myform {
+
+    position: relative;
+      left: 66%;
+      top: 16vw;
+      margin: 1%;
+  }
+
+  .enlarge {
+
+      position: absolute;
+      right: 108%;
+      top: -1vw;
+      text-align: center;
+      border:1px solid black
+  }
+
+  
+
+  .enlarge:hover {
+
+    border: 1px  solid red;
+  }
+
+  .new-tag {
+
+    position: absolute;
+    right: 238%;
+    top: 1rem;
+    width: 13%;
+    height: 3%;
+    background-color: red;
+    color:white;
+    text-align: center;
+
+  }
+
+  .triangle-left {
+    position: absolute;
+    top: 0px;
+    left: 56px;
+    border: 15px solid red;
+    border-right: 13px solid transparent;
+
+  }
+
+  p { padding: 4px;}
+
+  #plus-minus {
+
+    position: relative;
+    left: 2%;
+    top: 1rem;
+    display: flex;
+  }
+
+  .qty {
+    height: 51px;
+    text-align: center;
+    width:37%;
+    border-radius: 26px;
+
+  }
+
+  .qty-label{
+    position: relative;
+    top: 10px;
+  }
+
+  .btn-success {
+    position: relative;
+    left: 6px;
+    top: -1px;
+    border-radius: 0px;
+    font-size: 26px;
+    border-radius: 26px;
+  }
+
+  .btn-danger {
+    
+    position: relative;
+    right: 0px;
+    top: 0px;
+    border-radius: 0px;
+    font-size: 15px;
+    border-radius: 2px;
+  }
+
+  .image{
+    display: flex;
+    position: relative;
+    bottom: 15vw;
+    width: 21%;
+    left: -1%;
+    border:1px solid black;
+    text-align: center;
+    padding: 0px 2px;
+    
+  }
+
+  .image-list{
+    position: relative;
+    right: 185%;
+    top: -18rem;
+  }
+
+  .image:hover {
+    border:2px solid crimson;
+    text-align: center;
+  }
+
+  .searchbtn
+  {
+  position: absolute;
+  right: 16%;
+  top: 30%;
+  font-size: 1vw;
+  border-radius: 0px;
+    }
+
+    .searchbar 
+  {
+    width: 23%;
+    position: absolute;
+    left: 61%;
+    top: 31%;
+  }
+
+  .login 
+    {
+      position: absolute;
+      right: 7%;
+      color:white
+    }
+    
+  .login:hover{color:white;}
+  .register:hover {color:white;}
+  .register {color:white}
+
+  #cartnav {
+    position: absolute;
+    right: 11%;
+    top: 14%;
+    color: white;
+    font-size: 2.2vw;
+    }
+
+  .btn .badge {
+      position: relative;
+      top: -17px;
+      left: -18px;
+      font-size: 12px;
+      background: black;
+      color: white;
+    }
+
+  .menu {
+      position: relative;
+      left: -33%;
+    }
+
+  .dropdown-item 
+    {
+    display: block;
+    width: 100%;
+    padding: 2px;
+    font-weight: 500;
+    color: navy;
+    text-align: center;
+    border: none;
+    } 
+
+   .dropdown-menu
+    {
+      padding:0;
+      font-size: 1.3vw;
+      min-width: 10rem;
+      border: none;
+    }
+
+   
+
+  .dropdown-item:hover{
+      background-color:deepskyblue;
+  }
+
+  
+
+.option {
+  position: relative;
+  left: 11%;
+  top: 2px;
+}
+.btn-value {
+  padding: 0px;
+  font-size: 18px;
+}
+
+.checkout-title {
+  color:black;
+  border-left: 5px solid darkgreen;
+  font-size: 20px;
+  margin: 0px 8px;
+  padding: 10px;
+}
+
+#title-triangle {
+
+  position: absolute;
+  border: 7px solid green;
+  left: 28px;
+  top: 31%;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+
+.Shoe-sizes {
+  display: inline-flex;
+  position: relative;
+  top:18px;
+}
+
+a {
+  color:black;
+  text-decoration: none;
+}
+
+.pic-link {
+  color:white;
+  position: relative;
+  top: 104px;
+  left: 8%;
+  text-decoration: none;
+}
+
+/* .pic-link:hover {
+  color:white
+} */
+#remove {
+  position: relative;
+  right: 14%;
+  top: 9rem;
+  font-size: 15px;
+}
+
+#clear {
+  
+  position: relative;
+  right: 14%;
+  top: 9rem;
+  font-size: 15px;
+  display: none;
+}
+
+#shoe-name {
+  font-size: 17px;
+  font-weight: 500;
+  position: relative;
+  top: -20px;
+  margin-left: 8px;
+}
+
+.menu1 {
+  position: relative;
+  left:-20px;
+}
+.menu2 {
+  position: relative;
+  left:-9%;
+}
+
+.menu3 {
+  position: relative;
+  left:-16%;
+}
+
+.menu4 {
+  position: relative;
+  left:-23%;
+}
+
+.menu5 {
+  position: relative;
+  left:-30%;
+}
+
+.shoe-img {
+  width:22%;
+}
+
+.checkout-btn {
+
+  position: absolute;
+  right: 50px;
+  background-color: #20c997;
+  color: black;
+  padding: 15px;
+  border: none;
+  height: 50px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+}
+
+.checkout-btn:hover {
+  background-color: dodgerblue;
+  color:white;
+}
+
+.counter {
+  position: absolute;
+  right: 106px;
+  top: -135px;
+  border-radius: 46%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+}
+
+.counter2{
+  position: absolute;
+  top: 21%;
+  right: 143px;
+  font-size: 12px;
+  border-radius: 46%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  width: 18px;
+  height: 18px;
+}
+

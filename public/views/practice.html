@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container-fluid row">
+    <div class="col-2 border border-primary">hh</div>
+    <div class="col-10 border border-primary" id="items">
+    
+    </div>
+  </div>
+  <script>
+  var items = document.getElementById("items");
+  var data = [{id:1,image:"mqwmm",price:465},{id:2,image:"hjkkmmm",price:485},{id:3,image:"asjdjs",price:415},{id:1,image:"asdadlkl",price:345},{id:4,image:"tekka",price:75},{id:5,image:"ljasdkji",price:49},{id:5,image:"ljasdkji",price:49}
+,{id:5,image:"ljasdkji",price:49},{id:5,image:"ljasdkji",price:49},{id:5,image:"ljasdkji",price:49},{id:5,image:"ljasdkji",price:49}];
+  var row = getElement("row");
+  var flag;
+data.forEach((item,index)=>{
+  if(index%4 == 0 && index){
+    items.appendChild(row);
+    row = getElement("row");
+  }
+  flag = index;
+  var col = getElement("col");
+  var link = document.createElement("a");
+  link.href= "/products/"+item.id;
+  var name = document.createElement("div")
+      name.appendChild(document.createTextNode(item.image));
+  var price = document.createElement("div")
+      price.appendChild(document.createTextNode(item.price));
+  var div = document.createElement("div");
+  div.appendChild(name);
+  div.appendChild(price);
+  link.appendChild(div)
+  col.appendChild(link);
+  row.appendChild(col);
+})
+if((flag+1)/4 != 0 && flag){
+  items.appendChild(row);
+}
+
+  function getElement(a){
+   var x = document.createElement("div");
+   x.className = a==="row"? "row":"col-3 mb-5"
+   return x;
+  }
+
+  </script>
+</body>
+</html>

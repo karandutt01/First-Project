@@ -1,0 +1,107 @@
+<div>
+    <h1><center>Image Upload</center></h1><br>
+
+    <div id="root">
+        <form method="POST" action="upload" enctype="multipart/form-data">
+            <div id="section">
+                <label for="">Select First Adv Image:</label>
+                <input type="file" onchange="preview()" name="images" class="btn btn-dark mr-2" multiple>
+                <button id="btn" class="btn btn-success mr-4">Upload your files</button>
+            </div>
+        </form>
+
+        <form method="POST" action="uploadAdv" enctype="multipart/form-data">
+            <div id="section1">
+                <label for="">Select Second Adv Images:</label>
+                <input type="file" onchange="preview()" name="Advimage" class="btn btn-dark mr-2" multiple>
+                <button id="btn" class="btn btn-success mr-4">Upload your files</button>
+            </div>
+        </form>
+
+        <form method="POST" action="uploadAdv3" enctype="multipart/form-data">
+            <div id="sectionthird">
+                <label for="">Select Third Adv Images:</label>
+                <input type="file" onchange="preview()" name="Advimage3" class="btn btn-dark mr-2" multiple>
+                <button id="btn" class="btn btn-success mr-4">Upload your files</button>
+            </div>
+        </form>
+
+        <form method="POST" action="delete">
+            <div id="section2">
+                <span id="text1">Select the Filename: </span>    
+                <input type="file" name="delete" class="btn btn-dark mr-2" multiple>
+                <button class="btn btn-danger">Delete your files</button>
+            </div>
+        </form>
+
+        <form method="POST" action="update">
+            <div id="section3">
+                <div id="field">
+                    <label for="">Select the previous Filename</label>
+                    <input type="file" name="image1" class="btn btn-dark"  multiple>               
+                </div>
+
+                <div id="fieldone">
+                    <span id="text1">Select update Filename: </span>    
+                    <input type="file" name="update"  class="btn btn-dark mr-2" multiple>
+                    <button class="btn btn-warning">Update your files</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<style>
+
+    #btn {
+        margin-right: 10px;
+    }
+    #image{
+        display: inline-block;
+        border: 2px solid steelblue;
+    }
+
+    #fieldone{
+        margin-right: 16%;
+    }
+    #field{
+        margin-right: 36%;
+        margin-bottom: 2%;
+    }
+
+    #title {
+        text-align: center;
+        margin-bottom: 1%;
+    }
+
+   #section {
+       text-align: center;
+       margin-bottom: 3%;
+       margin-right: 18%;
+       } 
+       
+    #section1 {
+    text-align: center;
+    margin-bottom: 3%;
+    margin-right: 21%;
+    } 
+
+   #section2 {
+       text-align: center;
+       margin-bottom: 2%;
+       margin-right: 19%;
+       } 
+    #sectionthird{
+        text-align: center;
+       margin-bottom: 2%;
+       margin-right: 19%;
+    }
+   #section3 {
+    margin-right: 5%;
+    text-align: center;}  
+   #root {
+       border: 1px solid black;
+       /* margin: 0% 20%; */
+       padding: 10px 0px;
+   }
+</style>

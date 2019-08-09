@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./css/indexpage.css">
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
+  <script src="./js/dashboard/productmodule.js"></script>
+  <script src="./js/user/factories/productfact.js"></script>
+  
+
+  <title>Document</title>
+</head>
+<body>
+  <div ng-app="product">
+    <div ng-controller='productcntrl'>
+      <nav class="navbar navbar-light bg-danger">
+          <a class="navbar-brand" href='index'>
+              <img src="./logo/logo.png" class="img-fluid" width="50" height="45" alt="">
+          </a>
+
+          <div ng-repeat='key in product'>
+            <div ng-if="key.MainCategory=='Men'">
+              <div class="btn-group menu">
+                <div class="dropdown">
+                  <button class="btn btn-dark dropdow"  data-toggle="dropdown" id="dropdownMenu">{{key.MainCategory}}
+                  </button>
+
+                    <div class="dropdown-menu dropdown">
+                        <a class="dropdown-item btn btn-danger dropdown-header" data-toggle="dropdown"> 
+                            {{key.Category}}</a>
+                      <div class="dropdown-link"><a class="dropdown-item">{{key.SubCategory}}</a></div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div ng-if="key.MainCategory== 'Women'">
+              <div class="btn-group menu1">
+                <div class="dropdown">
+                  <button class="btn btn-dark dropdow"  data-toggle="dropdown" id="dropdownMenu">{{key.MainCategory}}
+                  </button>
+
+                    <div class="dropdown-menu dropdown">
+                        <a class="dropdown-item btn btn-danger dropdown-header" data-toggle="dropdown"> 
+                            {{key.Category}}</a>
+                      <div class="dropdown-link"><a class="dropdown-item" href="Jackets">{{key.SubCategory}}</a></div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div ng-if="key.MainCategory== 'Kids'">
+              <div class="btn-group menu2">
+                <div class="dropdown">
+                  <button class="btn btn-dark dropdow"  data-toggle="dropdown" id="dropdownMenu">{{key.MainCategory}}
+                  </button>
+
+                    <div class="dropdown-menu dropdown">
+                        <a class="dropdown-item btn btn-danger dropdown-header" data-toggle="dropdown"> 
+                            {{key.Category}}</a>
+                      <div class="dropdown-link"><a class="dropdown-item">{{key.SubCategory}}</a></div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div ng-if="key.MainCategory== 'Sports'">
+              <div class="btn-group menu3">
+                <div class="dropdown">
+                  <button class="btn btn-dark dropdow"  data-toggle="dropdown" id="dropdownMenu">{{key.MainCategory}}
+                  </button>
+
+                    <div class="dropdown-menu dropdown">
+                        <a class="dropdown-item btn btn-danger dropdown-header" data-toggle="dropdown"> 
+                            {{key.Category}}</a>
+                      <div class="dropdown-link"><a class="dropdown-item">{{key.SubCategory}}</a></div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div ng-if="key.MainCategory== 'Collection'">
+              <div class="btn-group menu4">
+                <div class="dropdown">
+                  <button class="btn btn-dark dropdow"  data-toggle="dropdown" id="dropdownMenu">{{key.MainCategory}}
+                  </button>
+
+                    <div class="dropdown-menu dropdown">
+                        <a class="dropdown-item btn btn-danger dropdown-header" data-toggle="dropdown"> 
+                            {{key.Category}}</a>
+                      <div class="dropdown-link"><a class="dropdown-item">{{key.SubCategory}}</a></div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div ng-if="key.MainCategory== 'Sale'">
+              <div class="btn-group menu5">
+                <div class="dropdown">
+                  <button class="btn btn-dark dropdow"  data-toggle="dropdown" id="dropdownMenu">{{key.MainCategory}}
+                  </button>
+
+                    <div class="dropdown-menu dropdown">
+                        <a class="dropdown-item btn btn-danger dropdown-header" data-toggle="dropdown"> 
+                            {{key.Category}}</a>
+                      <div class="dropdown-link"><a class="dropdown-item">{{key.SubCategory}}</a></div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form action="search" method="GET"  ng-controller="productcntrl">
+              <div>
+                  <input class="searchbar" autocomplete="off" name="search" ng-model="product.search" type="text" placeholder="Search for products">
+                  <span><button class="btn btn-dark searchbtn" ng-click="search()"><i class="fas fa-search"></i></button></span>
+              </div>
+          </form>
+      
+          <button id="cartnav"  class="btn"><i class="fas fa-shopping-cart"></i></button>
+      
+          <a class="login" href="login.html">Login</a>
+          <a class="register" href="register.html">Register</a>
+      </nav>
+    </div>
+
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+        <ol class="carousel-indicators">
+          <li data-slide-to="0" class="active"></li>
+          <li data-slide-to="1"></li>
+          <li data-slide-to="2"></li>
+        </ol>
+    
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="product"><img src="./images/images.jpg" class="d-block w-100"></a>
+            </div>
+    
+            <div class="carousel-item">
+                <img src="./imagesAdv/Advimage.jpg" class="d-block w-100"></a>
+            </div>
+    
+            <div class="carousel-item">
+                <img src="./imagesAdv3/Advimage3.jpg" class="d-block w-100">
+            </div>
+    
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+      </div>
+  </div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>

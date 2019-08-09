@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
+  <link rel="stylesheet" href="../css/product&homepage.css">
+  <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-danger">
+        <a class="navbar-brand" href="index">
+            <img src="./logo/logo.png" class="img-fluid" width="50" height="45" alt="">
+        </a>
+        
+        <div>
+        <%cart.forEach(menu=>{%>
+            <%if(menu.MainCategory=='Men'){%>
+            <div class="btn-group menu">
+                <div class="dropdown">
+                <button class="btn btn-dark dropdown mx-1"  data-toggle="dropdown" id="dropdownMenu">
+                    <%=menu.MainCategory%></button>
+
+                    <div class="dropdown-menu dropdown">
+                    <a class="dropdown-item btn btn-danger dropdown-header" data-toggle="dropdown"> 
+                        <%=menu.Category%></a>
+                        <div class="dropdown-link"><a class="dropdown-item" href="#"><%=menu.SubCategory%></a></div>
+                    </div>
+                </div> 
+            </div>
+            <%}%>
+
+            <%if(menu.MainCategory=='Women'){%>
+            <div class="btn-group menu">
+                <div class="dropdown">
+                    <button class="btn btn-dark dropdown mx-1"  data-toggle="dropdown" id="dropdownMenu">
+                    <%=menu.MainCategory%></button>
+                
+                    <div class="dropdown-menu dropdown">
+                    <a class="dropdown-item btn btn-danger dropdown-header" data-toggle="dropdown"> 
+                        <%=menu.Category%></a>
+                        <div class="dropdown-link"><a class="dropdown-item" href="Jackets"><%=menu.SubCategory%></a></div>
+                    </div>
+                </div> 
+            </div>
+            <%}%>
+
+            <%if(menu.MainCategory=='Kids'){%>
+            <div class="btn-group menu">
+                <div class="dropdown">
+                    <button class="btn btn-dark dropdown mx-1"  data-toggle="dropdown" id="dropdownMenu">
+                    <%=menu.MainCategory%></button>
+                
+                    <div class="dropdown-menu dropdown">
+                    <a class="dropdown-item btn btn-danger dropdown-header" data-toggle="dropdown"> 
+                        <%=menu.Category%></a>
+                        <div class="dropdown-link"><a class="dropdown-item" href="Jackets"><%=menu.SubCategory%></a></div>
+                    </div>
+                </div> 
+            </div>
+            <%}%>
+
+
+            <%if(menu.MainCategory=='Sports'){%>
+            <div class="btn-group menu">
+                <div class="dropdown">
+                    <button class="btn btn-dark dropdown mx-1"  data-toggle="dropdown" id="dropdownMenu">
+                    <%=menu.MainCategory%></button>
+                
+                    <div class="dropdown-menu dropdown">
+                    <a class="dropdown-item btn btn-danger dropdown-header" data-toggle="dropdown"> 
+                        <%=menu.Category%></a>
+                        <div class="dropdown-link"><a class="dropdown-item" href="Jackets"><%=menu.SubCategory%></a></div>
+                    </div>
+                </div> 
+            </div>
+            <%}%>
+
+
+            <%if(menu.MainCategory=='Collection'){%>
+            <div class="btn-group menu">
+                <div class="dropdown">
+                    <button class="btn btn-dark dropdown mx-1"  data-toggle="dropdown" id="dropdownMenu">
+                    <%=menu.MainCategory%></button>
+                
+                    <div class="dropdown-menu dropdown">
+                    <a class="dropdown-item btn btn-danger dropdown-header" data-toggle="dropdown"> 
+                        <%=menu.Category%></a>
+                        <div class="dropdown-link"><a class="dropdown-item" href="Jackets"><%=menu.SubCategory%></a></div>
+                    </div>
+                </div> 
+            </div>
+            <%}%>
+
+
+            <%if(menu.MainCategory=='Sale'){%>
+            <div class="btn-group menu">
+                <div class="dropdown">
+                    <button class="btn btn-dark dropdown mx-1"  data-toggle="dropdown" id="dropdownMenu">
+                    <%=menu.MainCategory%></button>
+                
+                    <div class="dropdown-menu dropdown">
+                    <a class="dropdown-item btn btn-danger dropdown-header" data-toggle="dropdown"> 
+                        <%=menu.Category%></a>
+                        <div class="dropdown-link"><a class="dropdown-item" href="Jackets"><%=menu.SubCategory%></a></div>
+                    </div>
+                </div> 
+            </div>
+            <%}%>
+        <%})%>
+        </div>
+    
+          <!-- <%=JSON.stringify(global.publicMenu)%> -->
+       
+        <form action="search" method="GET"  ng-controller="productcntrl">
+            <div>
+                <input class="searchbar" name="search" ng-model="product.search" type="text" placeholder="Search">
+                <span><button class="btn btn-dark searchbtn" ng-click="search()"><i class="fas fa-search"></i></button></span>
+            </div>
+        </form>
+    
+        <button id="cartnav"  class="btn"><i class="fas fa-shopping-cart"></i></button>
+    
+        <a class="login" href="login.html">Login</a>
+        <a class="register" href="register.html">Register</a>
+    </nav>
+
+    <div class="container-fluid">
+      <h1 class="mt-4">Your Shopping Cart is Empty</h1>
+      <h2>Please click <a style="color:blueviolet" href="index">here</a> to continue shopping</h2>
+    </div>
+</body>
+</html>
